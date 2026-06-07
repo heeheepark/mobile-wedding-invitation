@@ -1,0 +1,55 @@
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.accordion-body {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 36px;
+  padding: 27px 20px !important;
+}
+
+#collapseOne,
+#collapseTwo {
+  text-align: start;
+}
+
+.account-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bank {
+  display: inline-block;
+  width: 70px;
+}
+
+.account {
+  display: inline-block;
+  width: 145px;
+}
+
+.btn-copy {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 0 5px;
+}
+
+.btn-kakaopay {
+  background-color: #fae14b;
+  display: flex;
+  align-items: center;
+  width: 60px;
+  height: 25px;
+  border: 1px solid #fae14b;
+  border-radius: 3px;
+}
