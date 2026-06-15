@@ -3,7 +3,7 @@ import "../styles/account.css";
 
 const Account = () => {
   return (
-    <div>
+    <div className="section">
       <h3>마음 전하실 곳</h3>
       <div>
         <div className="accordion" id="accountInfoWrap">
@@ -30,18 +30,20 @@ const Account = () => {
                   <div>신랑</div>
                   <div className="account-wrap">
                     <div>
-                      <span className="bank groom-bank">신한은행</span>
                       <span className="account groom-account">
-                        100-030-625538
+                        600-910416-05407
                       </span>
+                      <span className="bank groom-bank">하나은행</span>
                     </div>
-                    <div className="btn-copy">복사하기</div>
-                    <div className="btn-kakaopay">
-                      <img
-                        className="btn-kakaopay"
-                        src="/icons/kakaopay.svg"
-                        alt=""
-                      />
+                    <div className="btn-wrap">
+                      <div className="btn-copy">복사하기</div>
+                      <div className="btn-kakaopay">
+                        <img
+                          className="btn-kakaopay"
+                          src="/icons/kakaopay.svg"
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -49,18 +51,20 @@ const Account = () => {
                   <div>아버지</div>
                   <div className="account-wrap">
                     <div>
-                      <span className="bank groom-father-bank">신한은행</span>
                       <span className="account groom-father-account">
                         100-030-625538
                       </span>
+                      <span className="bank groom-father-bank">신한은행</span>
                     </div>
-                    <div className="btn-copy">복사하기</div>
-                    <div className="btn-kakaopay">
-                      <img
-                        className="btn-kakaopay"
-                        src="/icons/kakaopay.svg"
-                        alt=""
-                      />
+                    <div className="btn-wrap">
+                      <div className="btn-copy">복사하기</div>
+                      <div className="btn-kakaopay">
+                        <img
+                          className="btn-kakaopay"
+                          src="/icons/kakaopay.svg"
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -68,18 +72,20 @@ const Account = () => {
                   <div>어머니</div>
                   <div className="account-wrap">
                     <div>
-                      <span className="bank groom-mother-bank">신한은행</span>
                       <span className="account groom-mother-account">
                         100-030-625538
                       </span>
+                      <span className="bank groom-mother-bank">신한은행</span>
                     </div>
-                    <div className="btn-copy">복사하기</div>
-                    <div className="btn-kakaopay">
-                      <img
-                        className="btn-kakaopay"
-                        src="/icons/kakaopay.svg"
-                        alt=""
-                      />
+                    <div className="btn-wrap">
+                      <div className="btn-copy">복사하기</div>
+                      <div className="btn-kakaopay">
+                        <img
+                          className="btn-kakaopay"
+                          src="/icons/kakaopay.svg"
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -109,18 +115,20 @@ const Account = () => {
                   <div>신부</div>
                   <div className="account-wrap">
                     <div>
-                      <span className="bank bride-bank">신한은행</span>
                       <span className="account bride-account">
                         100-030-625538
                       </span>
+                      <span className="bank bride-bank">신한은행</span>
                     </div>
-                    <div className="btn-copy">복사하기</div>
-                    <div className="btn-kakaopay">
-                      <img
-                        className="btn-kakaopay"
-                        src="/icons/kakaopay.svg"
-                        alt=""
-                      />
+                    <div className="btn-wrap">
+                      <div className="btn-copy">복사하기</div>
+                      <div className="btn-kakaopay">
+                        <img
+                          className="btn-kakaopay"
+                          src="/icons/kakaopay.svg"
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -128,18 +136,22 @@ const Account = () => {
                   <div>아버지</div>
                   <div className="account-wrap">
                     <div>
-                      <span className="bank bride-father-bank">신한은행</span>
                       <span className="account bride-father-account">
-                        100-030-625538
+                        008-08-0381644
+                      </span>
+                      <span className="bank bride-father-bank">
+                        iM뱅크(구 대구은행)
                       </span>
                     </div>
-                    <div className="btn-copy">복사하기</div>
-                    <div className="btn-kakaopay">
-                      <img
-                        className="btn-kakaopay"
-                        src="/icons/kakaopay.svg"
-                        alt=""
-                      />
+                    <div className="btn-wrap">
+                      <div className="btn-copy">복사하기</div>
+                      <div className="btn-kakaopay">
+                        <img
+                          className="btn-kakaopay"
+                          src="/icons/kakaopay.svg"
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -147,18 +159,20 @@ const Account = () => {
                   <div>어머니</div>
                   <div className="account-wrap">
                     <div>
-                      <span className="bank bride-mother-bank">신한은행</span>
                       <span className="account bride-mother-account">
-                        100-030-625538
+                        3333-21-8062221
                       </span>
+                      <span className="bank bride-mother-bank">카카오뱅크</span>
                     </div>
-                    <div className="btn-copy">복사하기</div>
-                    <div className="btn-kakaopay">
-                      <img
-                        className="btn-kakaopay"
-                        src="/icons/kakaopay.svg"
-                        alt=""
-                      />
+                    <div className="btn-wrap">
+                      <div className="btn-copy">복사하기</div>
+                      <div className="btn-kakaopay">
+                        <img
+                          className="btn-kakaopay"
+                          src="/icons/kakaopay.svg"
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>

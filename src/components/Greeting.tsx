@@ -10,8 +10,6 @@ const Greeting = () => {
         <div>
           설레는 첫 만남으로 시작된 인연이
           <br />
-          9년의 시간을 함께 걸어와
-          <br />
           소중한 결실을 맺게 되었습니다
         </div>
         <div>
@@ -56,7 +54,94 @@ const Greeting = () => {
         </div>
       </div>
       <div>
-        <div className="btn-contact-parent">혼주에게 연락하기</div>
+        <button
+          type="button"
+          className="btn btn-primary btn-contact-parent"
+          data-bs-toggle="modal"
+          data-bs-target="#contactParentModal"
+        >
+          혼주에게 연락하기
+        </button>
+
+        <div
+          className="modal fade"
+          id="contactParentModal"
+          aria-labelledby="contactParentModalLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title fs-5" id="contactParentModalLabel">
+                  혼주에게 연락하기
+                </h5>
+              </div>
+              <div className="modal-body">
+                <div>
+                  <div className="name-info-wrap">
+                    <span className="name-index groom">신랑 아버지</span>
+                    <span className="name">김정도</span>
+                    <div className="contact-btn-wrap">
+                      <span>
+                        <FontAwesomeIcon icon={faPhone} size="xs" />
+                      </span>
+                      <span>
+                        <FontAwesomeIcon icon={faPhone} size="xs" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="name-info-wrap">
+                  <span className="name-index groom">신랑 어머니</span>
+                  <span className="name">예분이</span>
+                  <div className="contact-btn-wrap">
+                    <span>
+                      <FontAwesomeIcon icon={faPhone} size="xs" />
+                    </span>
+                    <span>
+                      <FontAwesomeIcon icon={faPhone} size="xs" />
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <div className="name-info-wrap">
+                    <span className="name-index bride">신부 아버지</span>
+                    <span className="name">박효주</span>
+                    <div className="contact-btn-wrap">
+                      <span>
+                        <FontAwesomeIcon icon={faPhone} size="xs" />
+                      </span>
+                      <span>
+                        <FontAwesomeIcon icon={faPhone} size="xs" />
+                      </span>
+                    </div>
+                  </div>
+                  <div className="name-info-wrap">
+                    <span className="name-index bride">신부 어머니</span>
+                    <span className="name">이영선</span>
+                    <div className="contact-btn-wrap">
+                      <span>
+                        <FontAwesomeIcon icon={faPhone} size="xs" />
+                      </span>
+                      <span>
+                        <FontAwesomeIcon icon={faPhone} size="xs" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="modal-footer">
+            <button
+              type="button"
+              className="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              닫기
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

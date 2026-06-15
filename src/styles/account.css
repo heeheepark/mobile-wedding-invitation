@@ -10,11 +10,16 @@
 }
 
 .accordion-body {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 36px;
   padding: 27px 20px !important;
+}
+
+.accordion-body > div {
+  width: 100%;
 }
 
 #collapseOne,
@@ -23,19 +28,28 @@
 }
 
 .account-wrap {
+  width: 100%;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 10%;
+  margin-top: 6px;
 }
 
 .bank {
-  display: inline-block;
-  width: 70px;
+  display: block;
+  width: auto;
 }
 
 .account {
-  display: inline-block;
-  width: 145px;
+  display: block;
+  width: auto;
+}
+
+.btn-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .btn-copy {

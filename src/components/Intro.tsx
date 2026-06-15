@@ -5,7 +5,9 @@ import "../styles/intro.css";
 const Intro = () => {
   return (
     <div className="border-bottom info-wrap">
-      <h1>2026 | 10 | 24</h1>
+      <h1>
+        2026<span>|</span>10<span>|</span>24
+      </h1>
       <div id="imageWrap">
         <img
           className="img-fluid mb-5"
