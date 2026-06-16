@@ -23,19 +23,63 @@
   margin: 0 5px;
 }
 
+.icon {
+  cursor: pointer;
+}
+
 .btn-contact-parent {
   width: 300px;
   min-width: 100px;
-  border: 1px solid #c9c9c9;
+  border: 1px solid #c9c9c9 !important;
   border-radius: 5px;
   padding: 5px 10px;
   margin: 0 auto;
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.modal-dialog {
+  width: 400px !important;
+  padding-right: 15px !important;
+}
+
+.modal-header {
+  height: 80px;
+  background-color: #f1f1f1;
+  border-bottom: none !important;
+}
+
+#contactParentModalLabel {
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.modal-body {
+  padding: 0 20px !important;
+  border-bottom: none !important;
+}
+
+.modal-body > div:first-child {
+  border-bottom: 1px solid rgb(226, 226, 226);
+  padding: 20px;
+}
+
+.modal-body > div:last-child {
+  padding: 16px;
 }
 
 .name-info-wrap {
-  padding: 0 50px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
+}
+
+.name-info-wrap:first-child {
+  margin-bottom: 10px;
+}
+
+.name-info-wrap:nth-child(2):not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .name-index {
@@ -48,4 +92,23 @@
   display: inline-block;
   font-size: 18px;
   font-weight: 500;
+}
+
+.groom {
+  color: rgb(68, 82, 122);
+}
+
+.bride {
+  color: rgb(226, 126, 126);
+}
+
+.contact-btn-wrap > span:first-child {
+  margin-right: 20px;
+}
+
+.btn-secondary {
+  background-color: #fff !important;
+  border: 1px solid #c9c9c9 !important;
+  color: #000 !important;
+  margin: 0 auto !important;
 }

@@ -1,7 +1,7 @@
 import "../styles/common.css";
 import "../styles/greeting.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Greeting = () => {
   return (
@@ -35,7 +35,10 @@ const Greeting = () => {
           </span>
           <span style={{ display: "inline-block", width: "42px" }}>아들</span>
           <span className="name">시환</span>
-          <span>
+          <span
+            className="icon"
+            onClick={() => (window.location.href = "tel:010-9665-0983")}
+          >
             <FontAwesomeIcon icon={faPhone} size="xs" />
           </span>
         </div>
@@ -48,7 +51,10 @@ const Greeting = () => {
           </span>
           <span style={{ display: "inline-block", width: "42px" }}>딸</span>
           <span className="name">주희</span>
-          <span>
+          <span
+            className="icon"
+            onClick={() => (window.location.href = "tel:010-8611-7699")}
+          >
             <FontAwesomeIcon icon={faPhone} size="xs" />
           </span>
         </div>
@@ -69,12 +75,12 @@ const Greeting = () => {
           aria-labelledby="contactParentModalLabel"
           aria-hidden="true"
         >
-          <div className="modal-dialog">
+          <div className="modal-dialog modal-dialog-centered">
             <div className="modal-content">
               <div className="modal-header">
-                <h5 className="modal-title fs-5" id="contactParentModalLabel">
+                <div className="modal-title" id="contactParentModalLabel">
                   혼주에게 연락하기
-                </h5>
+                </div>
               </div>
               <div className="modal-body">
                 <div>
@@ -82,25 +88,45 @@ const Greeting = () => {
                     <span className="name-index groom">신랑 아버지</span>
                     <span className="name">김정도</span>
                     <div className="contact-btn-wrap">
-                      <span>
-                        <FontAwesomeIcon icon={faPhone} size="xs" />
+                      <span
+                        className="icon"
+                        onClick={() =>
+                          (window.location.href = "tel:010-1234-5678")
+                        }
+                      >
+                        <FontAwesomeIcon icon={faPhone} />
                       </span>
-                      <span>
-                        <FontAwesomeIcon icon={faPhone} size="xs" />
+                      <span
+                        className="icon"
+                        onClick={() =>
+                          (window.location.href = "mailto:example@email.com")
+                        }
+                      >
+                        <FontAwesomeIcon icon={faEnvelope} />
                       </span>
                     </div>
                   </div>
-                </div>
-                <div className="name-info-wrap">
-                  <span className="name-index groom">신랑 어머니</span>
-                  <span className="name">예분이</span>
-                  <div className="contact-btn-wrap">
-                    <span>
-                      <FontAwesomeIcon icon={faPhone} size="xs" />
-                    </span>
-                    <span>
-                      <FontAwesomeIcon icon={faPhone} size="xs" />
-                    </span>
+                  <div className="name-info-wrap">
+                    <span className="name-index groom">신랑 어머니</span>
+                    <span className="name">예분이</span>
+                    <div className="contact-btn-wrap">
+                      <span
+                        className="icon"
+                        onClick={() =>
+                          (window.location.href = "tel:010-1234-5678")
+                        }
+                      >
+                        <FontAwesomeIcon icon={faPhone} />
+                      </span>
+                      <span
+                        className="icon"
+                        onClick={() =>
+                          (window.location.href = "mailto:example@email.com")
+                        }
+                      >
+                        <FontAwesomeIcon icon={faEnvelope} />
+                      </span>
+                    </div>
                   </div>
                 </div>
                 <div>
@@ -108,11 +134,21 @@ const Greeting = () => {
                     <span className="name-index bride">신부 아버지</span>
                     <span className="name">박효주</span>
                     <div className="contact-btn-wrap">
-                      <span>
-                        <FontAwesomeIcon icon={faPhone} size="xs" />
+                      <span
+                        className="icon"
+                        onClick={() =>
+                          (window.location.href = "tel:010-1234-5678")
+                        }
+                      >
+                        <FontAwesomeIcon icon={faPhone} />
                       </span>
-                      <span>
-                        <FontAwesomeIcon icon={faPhone} size="xs" />
+                      <span
+                        className="icon"
+                        onClick={() =>
+                          (window.location.href = "mailto:example@email.com")
+                        }
+                      >
+                        <FontAwesomeIcon icon={faEnvelope} />
                       </span>
                     </div>
                   </div>
@@ -120,26 +156,36 @@ const Greeting = () => {
                     <span className="name-index bride">신부 어머니</span>
                     <span className="name">이영선</span>
                     <div className="contact-btn-wrap">
-                      <span>
-                        <FontAwesomeIcon icon={faPhone} size="xs" />
+                      <span
+                        className="icon"
+                        onClick={() =>
+                          (window.location.href = "tel:010-1234-5678")
+                        }
+                      >
+                        <FontAwesomeIcon icon={faPhone} />
                       </span>
-                      <span>
-                        <FontAwesomeIcon icon={faPhone} size="xs" />
+                      <span
+                        className="icon"
+                        onClick={() =>
+                          (window.location.href = "mailto:example@email.com")
+                        }
+                      >
+                        <FontAwesomeIcon icon={faEnvelope} />
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  닫기
+                </button>
+              </div>
             </div>
-          </div>
-          <div className="modal-footer">
-            <button
-              type="button"
-              className="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              닫기
-            </button>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ function App() {
   return (
     <div id="app">
       <div id="view">
-        <Home />;
+        <Home />
       </div>
     </div>
   );

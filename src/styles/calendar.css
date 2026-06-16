@@ -3,12 +3,18 @@
   margin: 0 0 10px 0 !important;
 }
 
+.date-info-wrap div:first-child {
+  margin-bottom: 10px;
+}
+
 .callendar-wrap {
-  padding: 30px;
+  width: 95%;
+  padding: 30px 20px;
+  margin: 0 auto;
 }
 
 .react-calendar__month-view__weekdays {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .react-calendar__month-view__weekdays__weekday abbr {
@@ -25,12 +31,13 @@
   cursor: default !important;
 }
 
-.sunday {
+.sunday,
+.holiday {
   color: rgb(255, 94, 94);
 }
 
 .react-calendar__month-view__days {
-  gap: 10px 0;
+  gap: 0;
 }
 
 .react-calendar__month-view__days__day:hover {
@@ -70,7 +77,7 @@
   content: "♥";
   position: absolute;
   inset: 0;
-  font-size: 45px;
+  font-size: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,7 +85,16 @@
 }
 
 .calculate-day-Wrap {
-  font-size: 18px;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.groom-name {
+  margin-right: 5px;
+}
+
+.bride-name {
+  margin-left: 5px;
 }
 
 .dday-count {

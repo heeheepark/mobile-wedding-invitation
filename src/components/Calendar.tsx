@@ -5,6 +5,15 @@ import { calculateDday } from "../utils/date";
 
 const Calendar = () => {
   const dDay = calculateDday(new Date(2026, 10, 24));
+  const eventDates = ["2026-10-03", "2026-10-05", "2026-10-09"];
+
+  const formatDate = (date: Date) => {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+  };
 
   return (
     <div className="section">
@@ -29,6 +38,12 @@ const Calendar = () => {
               classes.push("sunday");
             }
 
+            const formattedDate = formatDate(date);
+
+            if (eventDates.includes(formattedDate)) {
+              classes.push("holiday");
+            }
+
             if (
               date.getFullYear() === 2026 &&
               date.getMonth() === 9 &&
@@ -44,9 +59,9 @@ const Calendar = () => {
       <div className="calculate-day-Wrap">
         <div>
           <div>
-            <span>시환</span>
+            <span className="groom-name">시환</span>
             <span>♥</span>
-            <span>주희</span> 결혼식이{" "}
+            <span className="bride-name">주희</span>의 결혼식이{" "}
             <span className="dday-count">{dDay}</span>일{" "}
             <span>남았습니다.</span>
           </div>

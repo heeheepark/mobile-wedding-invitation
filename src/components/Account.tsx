@@ -27,7 +27,7 @@ const Account = () => {
             >
               <div className="accordion-body">
                 <div className="">
-                  <div>신랑</div>
+                  <div>김시환</div>
                   <div className="account-wrap">
                     <div>
                       <span className="account groom-account">
@@ -48,7 +48,7 @@ const Account = () => {
                   </div>
                 </div>
                 <div className="groom-fater-wrap">
-                  <div>아버지</div>
+                  <div>김정도</div>
                   <div className="account-wrap">
                     <div>
                       <span className="account groom-father-account">
@@ -69,7 +69,7 @@ const Account = () => {
                   </div>
                 </div>
                 <div className="goorm-mother-wrap">
-                  <div>어머니</div>
+                  <div>예분이</div>
                   <div className="account-wrap">
                     <div>
                       <span className="account groom-mother-account">
@@ -112,7 +112,7 @@ const Account = () => {
             >
               <div className="accordion-body">
                 <div>
-                  <div>신부</div>
+                  <div>박주희</div>
                   <div className="account-wrap">
                     <div>
                       <span className="account bride-account">
@@ -133,7 +133,7 @@ const Account = () => {
                   </div>
                 </div>
                 <div className="bride-fater-wrap">
-                  <div>아버지</div>
+                  <div>박효주</div>
                   <div className="account-wrap">
                     <div>
                       <span className="account bride-father-account">
@@ -156,7 +156,7 @@ const Account = () => {
                   </div>
                 </div>
                 <div className="bride-mother-wrap">
-                  <div>어머니</div>
+                  <div>이영선</div>
                   <div className="account-wrap">
                     <div>
                       <span className="account bride-mother-account">

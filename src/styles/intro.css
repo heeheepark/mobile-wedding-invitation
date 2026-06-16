@@ -2,7 +2,15 @@
   padding: 0 0 100px 0 !important;
 }
 
-.info-wrap .name {
-  display: inline-block;
-  margin: 0 25px;
+.name-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+.name-wrap span:nth-child(2) {
+  font-size: 20px;
 }

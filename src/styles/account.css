@@ -1,3 +1,27 @@
+.section {
+  margin: 150px 0 100px 0;
+}
+
+.groom-wrap {
+  background-color: rgb(234, 245, 255) !important;
+  border: none !important;
+}
+
+.bride-wrap {
+  background-color: rgb(255, 239, 239) !important;
+  border: none !important;
+}
+
+.accordion-button[data-bs-target="#collapseOne"] {
+  background-color: rgb(234, 245, 255) !important;
+  border: none !important;
+}
+
+.accordion-button[data-bs-target="#collapseTwo"] {
+  background-color: rgb(255, 239, 239) !important;
+  border: none !important;
+}
+
 .accordion-button:not(.collapsed) {
   background-color: transparent !important;
   color: inherit !important;
@@ -53,9 +77,15 @@
 }
 
 .btn-copy {
+  width: 60px;
+  height: 25px;
+  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
-  padding: 0 5px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 25px;
+  cursor: pointer;
 }
 
 .btn-kakaopay {
@@ -66,4 +96,5 @@
   height: 25px;
   border: 1px solid #fae14b;
   border-radius: 3px;
+  cursor: pointer;
 }
