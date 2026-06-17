@@ -62,7 +62,7 @@ const Map = () => {
           target="_blank"
         >
           <img
-            src="/icons/navermap.png"
+            src={import.meta.env.BASE_URL + "/icons/navermap.png"}
             alt="네이버지도"
             width="50px"
             height="50px"
@@ -75,7 +75,7 @@ const Map = () => {
           target="_blank"
         >
           <img
-            src="/icons/kakaomap.png"
+            src={import.meta.env.BASE_URL + "/icons/kakaomap.png"}
             alt="카카오맵"
             width="50px"
             height="50px"
@@ -87,7 +87,12 @@ const Map = () => {
           href="https://poi.tmobiweb.com/app/share/position?contents=dHlwZT0yJnBrZXk9ODY4NjU5NjAwJnBvaUlkPTg2ODY1OTYmcG9pTmFtZT0lRUIlODUlQjglRUIlQjklODQlRUMlOTUlODQlRUElQjAlODglRUIlOUQlQkMlRUMlOUIlQTglRUIlOTQlQTklMjAlRUMlQTAlODQlRUMlOUUlOTAlRUElQjQlODAlRUMlQTAlOTAmY2VudGVyWD00NjI5OTAzJmNlbnRlclk9MTI5MjUzMyZ0aW1lPTIwMjYlRUIlODUlODQlMjA2JUVDJTlCJTk0JTIwMTYlRUMlOUQlQkMlMjAyMTo3JnRlbD0wNTMtNjA0LTE5MDAmYWRkcj0lRUIlOEMlODAlRUElQjUlQUMlMjAlRUIlQjYlODElRUElQjUlQUMlMjAlRUMlOUMlQTAlRUQlODYlQjUlRUIlOEIlQTglRUMlQTclODAlRUIlQTElOUMlMjA0NQ==&tailParam=%7B%7D"
           target="_blank"
         >
-          <img src="/icons/tmap.svg" alt="티맵" width="50px" height="50px" />
+          <img
+            src={import.meta.env.BASE_URL + "/icons/tmap.svg"}
+            alt="티맵"
+            width="50px"
+            height="50px"
+          />
           <div>티맵</div>
         </a>
       </div>

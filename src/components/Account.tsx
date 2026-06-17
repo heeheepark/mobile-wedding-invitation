@@ -53,7 +53,7 @@ const Account = () => {
                       <div className="btn-kakaopay">
                         <img
                           className="btn-kakaopay"
-                          src="/icons/kakaopay.svg"
+                          src={import.meta.env.BASE_URL + "/icons/kakaopay.svg"}
                           alt=""
                         />
                       </div>
@@ -81,7 +81,7 @@ const Account = () => {
                       <div className="btn-kakaopay">
                         <img
                           className="btn-kakaopay"
-                          src="/icons/kakaopay.svg"
+                          src={import.meta.env.BASE_URL + "/icons/kakaopay.svg"}
                           alt=""
                         />
                       </div>
@@ -109,7 +109,7 @@ const Account = () => {
                       <div className="btn-kakaopay">
                         <img
                           className="btn-kakaopay"
-                          src="/icons/kakaopay.svg"
+                          src={import.meta.env.BASE_URL + "/icons/kakaopay.svg"}
                           alt=""
                         />
                       </div>
@@ -159,7 +159,7 @@ const Account = () => {
                       <div className="btn-kakaopay">
                         <img
                           className="btn-kakaopay"
-                          src="/icons/kakaopay.svg"
+                          src={import.meta.env.BASE_URL + "/icons/kakaopay.svg"}
                           alt=""
                         />
                       </div>
@@ -189,7 +189,7 @@ const Account = () => {
                       <div className="btn-kakaopay">
                         <img
                           className="btn-kakaopay"
-                          src="/icons/kakaopay.svg"
+                          src={import.meta.env.BASE_URL + "/icons/kakaopay.svg"}
                           alt=""
                         />
                       </div>
@@ -217,7 +217,7 @@ const Account = () => {
                       <div className="btn-kakaopay">
                         <img
                           className="btn-kakaopay"
-                          src="/icons/kakaopay.svg"
+                          src={import.meta.env.BASE_URL + "/icons/kakaopay.svg"}
                           alt=""
                         />
                       </div>
