@@ -79,7 +79,11 @@ const Gallery = () => {
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content">
             {selectedImage && (
-              <img src={selectedImage} alt="" style={{ width: "100%" }} />
+              <img
+                src={import.meta.env.BASE_URL + selectedImage}
+                alt=""
+                style={{ width: "100%" }}
+              />
             )}
           </div>
         </div>
