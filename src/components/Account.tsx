@@ -3,7 +3,7 @@ import "../styles/account.css";
 import { motion } from "framer-motion";
 
 const Account = () => {
-  const onCopy = (text, bank) => {
+  const onCopy = (text: string, bank: string) => {
     navigator.clipboard.writeText(text);
     alert(`계좌번호가 복사되었습니다.\n${bank} ${text}`);
   };

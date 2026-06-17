@@ -34,8 +34,8 @@ const Calendar = () => {
           value={new Date(2026, 10, 24)}
           activeStartDate={new Date(2026, 9, 27)}
           showNavigation={false}
-          formatDay={(locale, date) => date.getDate().toString()}
-          formatShortWeekday={(locale, date) =>
+          formatDay={(_, date) => date.getDate().toString()}
+          formatShortWeekday={(_, date) =>
             ["일", "월", "화", "수", "목", "금", "토"][date.getDay()]
           }
           tileClassName={({ date, view }) => {
