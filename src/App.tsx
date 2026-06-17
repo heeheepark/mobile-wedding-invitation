@@ -1,4 +1,5 @@
 import Home from "./pages/Home";
+import "animate.css";
 
 function App() {
   return (

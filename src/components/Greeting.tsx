@@ -2,24 +2,32 @@ import "../styles/common.css";
 import "../styles/greeting.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 const Greeting = () => {
   return (
-    <div className="section">
+    <motion.div
+      className="section"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      <h3 className="title">Wedding Invitation</h3>
       <div className="message-wrap">
-        <div>
+        <div className="animate__animated animate__fadeInUp">
           설레는 첫 만남으로 시작된 인연이
           <br />
           소중한 결실을 맺게 되었습니다
         </div>
-        <div>
+        <div className="animate__animated animate__fadeInUp">
           서로의 가장 좋은 친구이자
           <br />
           든든한 편이 되어온 저희가
           <br />
           이제 한 가정을 이루려 합니다
         </div>
-        <div>
+        <div className="animate__animated animate__fadeInUp">
           귀한 걸음으로 오셔서
           <br />
           축복해 주시고 함께해 주세요
@@ -189,7 +197,7 @@ const Greeting = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

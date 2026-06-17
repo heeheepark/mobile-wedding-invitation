@@ -6,6 +6,7 @@ import Gallery from "../components/Gallery";
 import Greeting from "../components/Greeting";
 import Intro from "../components/Intro";
 import Map from "../components/Map";
+import Route from "../components/Route";
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
       <Calendar />
       <Gallery />
       <Map />
+      <Route />
       <Account />
       <Footer />
     </div>

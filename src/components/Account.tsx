@@ -1,9 +1,15 @@
 import "../styles/common.css";
 import "../styles/account.css";
+import { motion } from "framer-motion";
 
 const Account = () => {
+  const onCopy = (text, bank) => {
+    navigator.clipboard.writeText(text);
+    alert(`계좌번호가 복사되었습니다.\n${bank} ${text}`);
+  };
+
   return (
-    <div className="section">
+    <motion.div className="section">
       <h3>마음 전하실 곳</h3>
       <div>
         <div className="accordion" id="accountInfoWrap">
@@ -36,7 +42,14 @@ const Account = () => {
                       <span className="bank groom-bank">하나은행</span>
                     </div>
                     <div className="btn-wrap">
-                      <div className="btn-copy">복사하기</div>
+                      <div
+                        className="btn-copy"
+                        onClick={() => {
+                          onCopy("600-910416-05407", "하나은행");
+                        }}
+                      >
+                        복사하기
+                      </div>
                       <div className="btn-kakaopay">
                         <img
                           className="btn-kakaopay"
@@ -57,7 +70,14 @@ const Account = () => {
                       <span className="bank groom-father-bank">신한은행</span>
                     </div>
                     <div className="btn-wrap">
-                      <div className="btn-copy">복사하기</div>
+                      <div
+                        className="btn-copy"
+                        onClick={() => {
+                          onCopy("600-910416-05407", "하나은행");
+                        }}
+                      >
+                        복사하기
+                      </div>
                       <div className="btn-kakaopay">
                         <img
                           className="btn-kakaopay"
@@ -78,7 +98,14 @@ const Account = () => {
                       <span className="bank groom-mother-bank">신한은행</span>
                     </div>
                     <div className="btn-wrap">
-                      <div className="btn-copy">복사하기</div>
+                      <div
+                        className="btn-copy"
+                        onClick={() => {
+                          onCopy("600-910416-05407", "하나은행");
+                        }}
+                      >
+                        복사하기
+                      </div>
                       <div className="btn-kakaopay">
                         <img
                           className="btn-kakaopay"
@@ -121,7 +148,14 @@ const Account = () => {
                       <span className="bank bride-bank">신한은행</span>
                     </div>
                     <div className="btn-wrap">
-                      <div className="btn-copy">복사하기</div>
+                      <div
+                        className="btn-copy"
+                        onClick={() => {
+                          onCopy("100-030-625538", "신한은행");
+                        }}
+                      >
+                        복사하기
+                      </div>
                       <div className="btn-kakaopay">
                         <img
                           className="btn-kakaopay"
@@ -144,7 +178,14 @@ const Account = () => {
                       </span>
                     </div>
                     <div className="btn-wrap">
-                      <div className="btn-copy">복사하기</div>
+                      <div
+                        className="btn-copy"
+                        onClick={() => {
+                          onCopy("008-08-0381644", "iM뱅크");
+                        }}
+                      >
+                        복사하기
+                      </div>
                       <div className="btn-kakaopay">
                         <img
                           className="btn-kakaopay"
@@ -165,7 +206,14 @@ const Account = () => {
                       <span className="bank bride-mother-bank">카카오뱅크</span>
                     </div>
                     <div className="btn-wrap">
-                      <div className="btn-copy">복사하기</div>
+                      <div
+                        className="btn-copy"
+                        onClick={() => {
+                          onCopy("3333-21-8062221", "카카오뱅크");
+                        }}
+                      >
+                        복사하기
+                      </div>
                       <div className="btn-kakaopay">
                         <img
                           className="btn-kakaopay"
@@ -181,7 +229,7 @@ const Account = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

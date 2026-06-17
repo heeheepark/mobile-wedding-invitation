@@ -2,6 +2,7 @@ import "../styles/common.css";
 import "../styles/calendar.css";
 import ReactCalendar from "react-calendar";
 import { calculateDday } from "../utils/date";
+import { motion } from "framer-motion";
 
 const Calendar = () => {
   const dDay = calculateDday(new Date(2026, 10, 24));
@@ -16,7 +17,13 @@ const Calendar = () => {
   };
 
   return (
-    <div className="section">
+    <motion.div
+      className="section"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
       <h3 className="date-info-wrap">
         <div>2026년 10월 24일 토요일</div>
         <div>오전 11시 30분</div>
@@ -67,7 +74,7 @@ const Calendar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

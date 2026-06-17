@@ -3,10 +3,11 @@ import { faKakaoTalk } from "@fortawesome/free-brands-svg-icons";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
 import "../styles/common.css";
 import "../styles/footer.css";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <div>
+    <motion.div>
       <div className="footer-wrap">
         <div className="bnt-wrap">
           <div className="share-btn-wrap">
@@ -15,12 +16,12 @@ const Footer = () => {
           </div>
           <div className="copy-link-btn-wrap">
             <FontAwesomeIcon icon={faCopy} />
-            <span className="copy-link-btn">링크주소 복사하기</span>
+            <span className="copy-link-btn">링크 복사하기</span>
           </div>
         </div>
         <div className="credits">Developed by jooheepark</div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
