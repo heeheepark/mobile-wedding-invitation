@@ -7,7 +7,7 @@ const Intro = () => {
       <div className="main-image-wrap">
         <img
           className="img-fluid mb-5"
-          src="/images/main.png"
+          src={import.meta.env.BASE_URL + "images/main.png"}
           alt=""
           style={{ width: "100%", height: "100%" }}
         />

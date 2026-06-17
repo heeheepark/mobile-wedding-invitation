@@ -64,7 +64,7 @@ const Gallery = () => {
           {images.map((src, idx) => (
             <SwiperSlide key={idx}>
               <img
-                src={src}
+                src={import.meta.env.BASE_URL + src}
                 className="gallery-image"
                 onClick={() => setSelectedImage(src)}
                 data-bs-toggle="modal"
