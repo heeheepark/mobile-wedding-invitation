@@ -7,7 +7,7 @@ const Intro = () => {
       <div className="main-image-wrap">
         <img
           className="img-fluid mb-5"
-          src={import.meta.env.BASE_URL + "images/main.png"}
+          src={import.meta.env.BASE_URL + "images/main.webp"}
           alt=""
           style={{ width: "100%", height: "100%" }}
         />
@@ -19,7 +19,7 @@ const Intro = () => {
           <span className="bride-name">박주희</span>
         </div>
         <div className="info-wrap">
-          <div>2026년 10월 24일 토요일 오전 11:30분</div>
+          <div>2026년 10월 24일 토요일 오전 11시 30분</div>
           <div>노비아갈라 전자관점 보타닉가든홀</div>
         </div>
       </div>
