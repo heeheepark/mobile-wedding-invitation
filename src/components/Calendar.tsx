@@ -5,7 +5,10 @@ import { calculateDday } from "../utils/date";
 import { motion } from "framer-motion";
 
 const Calendar = () => {
-  const dDay = calculateDday(new Date(2026, 10, 24));
+  const today = new Date();
+  const targetDate = new Date("2026-10-24");
+  const diffTime = targetDate.getTime() - today.getTime();
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   const eventDates = ["2026-10-03", "2026-10-05", "2026-10-09"];
 
   const formatDate = (date: Date) => {
@@ -69,7 +72,7 @@ const Calendar = () => {
             <span className="groom-name">시환</span>
             <span>♥</span>
             <span className="bride-name">주희</span>의 결혼식이{" "}
-            <span className="dday-count">{dDay}</span>일{" "}
+            <span className="dday-count">{diffDays}</span>일{" "}
             <span>남았습니다.</span>
           </div>
         </div>
