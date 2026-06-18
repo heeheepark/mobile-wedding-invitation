@@ -5,6 +5,45 @@ import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
 const Greeting = () => {
+  const message =
+    "설레는 첫 만남으로 시작된 인연이\n소중한 결실을 맺게 되었습니다.\n\n서로의 가장 좋은 친구이자\n든든한 편이 되어온 저희가\n이제 한 가정을 이루려 합니다.\n\n귀한 걸음으로 오셔서\n축복해 주시고 함께해 주세요.";
+
+  const groomList = {
+    self: {
+      fullName: "김시환",
+      firstName: "시환",
+      lastName: "김",
+      phone: "010-9665-0983",
+    },
+    father: {
+      name: "김정도",
+      phone: "010-7138-0983",
+    },
+    mother: {
+      name: "예분이",
+      phone: "010-4767-0983",
+    },
+  };
+
+  const brideList = {
+    self: {
+      fullName: "박주희",
+      firstName: "주희",
+      lastName: "박",
+      phone: "010-8611-7699",
+    },
+    father: {
+      name: "박효주",
+      phone: "010-9141-7699",
+    },
+    mother: {
+      name: "이영선",
+      phone: "010-4164-7699",
+    },
+  };
+
+  const peopleList = [groomList, brideList];
+
   return (
     <motion.div
       className="section"
@@ -15,57 +54,37 @@ const Greeting = () => {
     >
       <h3 className="title">Wedding Invitation</h3>
       <div className="message-wrap">
-        <div className="animate__animated animate__fadeInUp">
-          설레는 첫 만남으로 시작된 인연이
-          <br />
-          소중한 결실을 맺게 되었습니다
-        </div>
-        <div className="animate__animated animate__fadeInUp">
-          서로의 가장 좋은 친구이자
-          <br />
-          든든한 편이 되어온 저희가
-          <br />
-          이제 한 가정을 이루려 합니다
-        </div>
-        <div className="animate__animated animate__fadeInUp">
-          귀한 걸음으로 오셔서
-          <br />
-          축복해 주시고 함께해 주세요
+        <div className="message animate__animated animate__fadeInUp ">
+          {message}
         </div>
       </div>
       <div className="contect-wrap">
-        <div>
-          <span className="name">김정도</span>
-          <span>·</span>
-          <span className="name">예분이</span>
-          <span className="me-2" style={{ display: "inline-block" }}>
-            의
-          </span>
-          <span style={{ display: "inline-block", width: "42px" }}>아들</span>
-          <span className="name">시환</span>
-          <span
-            className="icon"
-            onClick={() => (window.location.href = "tel:010-9665-0983")}
-          >
-            <FontAwesomeIcon icon={faPhone} size="xs" />
-          </span>
-        </div>
-        <div>
-          <span className="name">박효주</span>
-          <span>·</span>
-          <span className="name">이영선</span>
-          <span className="me-2" style={{ display: "inline-block" }}>
-            의
-          </span>
-          <span style={{ display: "inline-block", width: "42px" }}>딸</span>
-          <span className="name">주희</span>
-          <span
-            className="icon"
-            onClick={() => (window.location.href = "tel:010-8611-7699")}
-          >
-            <FontAwesomeIcon icon={faPhone} size="xs" />
-          </span>
-        </div>
+        {peopleList.map((type) => {
+          const self = type.self;
+          const father = type.father;
+          const mother = type.mother;
+
+          return (
+            <div key={self.fullName}>
+              <span className="name">{father.name}</span>
+              <span>·</span>
+              <span className="name">{mother.name}</span>
+              <span className="me-2" style={{ display: "inline-block" }}>
+                의
+              </span>
+              <span style={{ display: "inline-block", width: "42px" }}>
+                {type == groomList ? "아들" : "딸"}
+              </span>
+              <span className="name">{self.firstName}</span>
+              <span
+                className="icon"
+                onClick={() => (window.location.href = `tel:${self.phone}`)}
+              >
+                <FontAwesomeIcon icon={faPhone} size="xs" />
+              </span>
+            </div>
+          );
+        })}
       </div>
       <div>
         <button
@@ -91,98 +110,65 @@ const Greeting = () => {
                 </div>
               </div>
               <div className="modal-body">
-                <div>
-                  <div className="name-info-wrap">
-                    <span className="name-index groom">신랑 아버지</span>
-                    <span className="name">김정도</span>
-                    <div className="contact-btn-wrap">
-                      <span
-                        className="icon"
-                        onClick={() =>
-                          (window.location.href = "tel:010-1234-5678")
-                        }
-                      >
-                        <FontAwesomeIcon icon={faPhone} />
-                      </span>
-                      <span
-                        className="icon"
-                        onClick={() =>
-                          (window.location.href = "mailto:example@email.com")
-                        }
-                      >
-                        <FontAwesomeIcon icon={faEnvelope} />
-                      </span>
+                {peopleList.map((type) => {
+                  const role = type == groomList ? "groom" : "bride";
+                  const roleName = role == "groom" ? "신랑" : "신부";
+                  const father = type.father;
+                  const mother = type.mother;
+
+                  return (
+                    <div key={type.self.fullName}>
+                      <div className="name-info-wrap">
+                        <span className={`name-index ${role}`}>
+                          {roleName} 아버지
+                        </span>
+                        <span className="name">{father.name}</span>
+                        <div className="contact-btn-wrap">
+                          <span
+                            className="icon"
+                            onClick={() =>
+                              (window.location.href = `tel:${father.phone}`)
+                            }
+                          >
+                            <FontAwesomeIcon icon={faPhone} />
+                          </span>
+                          <span
+                            className="icon"
+                            onClick={() =>
+                              (window.location.href = `sms:${father.phone}`)
+                            }
+                          >
+                            <FontAwesomeIcon icon={faEnvelope} />
+                          </span>
+                        </div>
+                      </div>
+                      <div className="name-info-wrap">
+                        <span className={`name-index ${role}`}>
+                          {roleName} 어머니
+                        </span>
+                        <span className="name">{mother.name}</span>
+                        <div className="contact-btn-wrap">
+                          <span
+                            className="icon"
+                            onClick={() =>
+                              (window.location.href = `tel:${mother.phone}`)
+                            }
+                          >
+                            <FontAwesomeIcon icon={faPhone} />
+                          </span>
+                          <span
+                            className="icon"
+                            onClick={() =>
+                              (window.location.href = `sms:${mother.phone}`)
+                            }
+                          >
+                            <FontAwesomeIcon icon={faEnvelope} />
+                          </span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="name-info-wrap">
-                    <span className="name-index groom">신랑 어머니</span>
-                    <span className="name">예분이</span>
-                    <div className="contact-btn-wrap">
-                      <span
-                        className="icon"
-                        onClick={() =>
-                          (window.location.href = "tel:010-1234-5678")
-                        }
-                      >
-                        <FontAwesomeIcon icon={faPhone} />
-                      </span>
-                      <span
-                        className="icon"
-                        onClick={() =>
-                          (window.location.href = "mailto:example@email.com")
-                        }
-                      >
-                        <FontAwesomeIcon icon={faEnvelope} />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div className="name-info-wrap">
-                    <span className="name-index bride">신부 아버지</span>
-                    <span className="name">박효주</span>
-                    <div className="contact-btn-wrap">
-                      <span
-                        className="icon"
-                        onClick={() =>
-                          (window.location.href = "tel:010-1234-5678")
-                        }
-                      >
-                        <FontAwesomeIcon icon={faPhone} />
-                      </span>
-                      <span
-                        className="icon"
-                        onClick={() =>
-                          (window.location.href = "mailto:example@email.com")
-                        }
-                      >
-                        <FontAwesomeIcon icon={faEnvelope} />
-                      </span>
-                    </div>
-                  </div>
-                  <div className="name-info-wrap">
-                    <span className="name-index bride">신부 어머니</span>
-                    <span className="name">이영선</span>
-                    <div className="contact-btn-wrap">
-                      <span
-                        className="icon"
-                        onClick={() =>
-                          (window.location.href = "tel:010-1234-5678")
-                        }
-                      >
-                        <FontAwesomeIcon icon={faPhone} />
-                      </span>
-                      <span
-                        className="icon"
-                        onClick={() =>
-                          (window.location.href = "mailto:example@email.com")
-                        }
-                      >
-                        <FontAwesomeIcon icon={faEnvelope} />
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
               <div className="modal-footer">
                 <button

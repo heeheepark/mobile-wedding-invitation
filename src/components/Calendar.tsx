@@ -28,7 +28,7 @@ const Calendar = () => {
         <div>2026년 10월 24일 토요일</div>
         <div>오전 11시 30분</div>
       </h3>
-      <div className="callendar-wrap">
+      <div className="calendar-wrap">
         <ReactCalendar
           locale="en-US"
           value={new Date(2026, 10, 24)}

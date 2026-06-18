@@ -8,8 +8,56 @@ const Account = () => {
     alert(`계좌번호가 복사되었습니다.\n${bank} ${text}`);
   };
 
+  const groomList: Array<keyof typeof groomAccountList> = [
+    "groom",
+    "groom_father",
+    "groom_mother",
+  ];
+
+  const brideList: Array<keyof typeof brideAccountList> = [
+    "bride",
+    "bride_father",
+    "bride_mother",
+  ];
+
+  const groomAccountList = {
+    groom: {
+      name: "김시환",
+      account: "600-910416-05407",
+      bank: "하나은행",
+    },
+    groom_father: {
+      name: "김정도",
+      account: "831402-01-139365",
+      bank: "국민은행",
+    },
+    groom_mother: {
+      name: "예분이",
+      account: "317-13-002992",
+      bank: "iM뱅크",
+    },
+  };
+
+  const brideAccountList = {
+    bride: {
+      name: "박주희",
+      account: "100-030-625538",
+      bank: "신한은행",
+    },
+    bride_father: {
+      name: "박효주",
+      account: "008-08-038164-4",
+      bank: "iM뱅크",
+    },
+    bride_mother: {
+      name: "이영선",
+      account: "3333-21-8062221",
+      bank: "카카오뱅크",
+    },
+  };
+
   return (
-    <motion.div className="section">
+    <motion.div className="account">
       <h3>마음 전하실 곳</h3>
       <div>
         <div className="accordion" id="accountInfoWrap">
@@ -32,90 +80,45 @@ const Account = () => {
               data-bs-parent="#accountInfoWrap"
             >
               <div className="accordion-body">
-                <div className="">
-                  <div>김시환</div>
-                  <div className="account-wrap">
-                    <div>
-                      <span className="account groom-account">
-                        600-910416-05407
-                      </span>
-                      <span className="bank groom-bank">하나은행</span>
-                    </div>
-                    <div className="btn-wrap">
-                      <div
-                        className="btn-copy"
-                        onClick={() => {
-                          onCopy("600-910416-05407", "하나은행");
-                        }}
-                      >
-                        복사하기
-                      </div>
-                      <div className="btn-kakaopay">
-                        <img
-                          className="btn-kakaopay"
-                          src={import.meta.env.BASE_URL + "/icons/kakaopay.svg"}
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="groom-fater-wrap">
-                  <div>김정도</div>
-                  <div className="account-wrap">
-                    <div>
-                      <span className="account groom-father-account">
-                        100-030-625538
-                      </span>
-                      <span className="bank groom-father-bank">신한은행</span>
-                    </div>
-                    <div className="btn-wrap">
-                      <div
-                        className="btn-copy"
-                        onClick={() => {
-                          onCopy("600-910416-05407", "하나은행");
-                        }}
-                      >
-                        복사하기
-                      </div>
-                      <div className="btn-kakaopay">
-                        <img
-                          className="btn-kakaopay"
-                          src={import.meta.env.BASE_URL + "/icons/kakaopay.svg"}
-                          alt=""
-                        />
+                {groomList.map((type) => {
+                  const accountInfo = groomAccountList[type];
+                  const name = accountInfo.name;
+                  const account = accountInfo.account;
+                  const bank = accountInfo.bank;
+
+                  return (
+                    <div className="" key={type}>
+                      <div>{name}</div>
+                      <div className="account-wrap">
+                        <div>
+                          <span className="account groom-account">
+                            {account}
+                          </span>
+                          <span className="bank groom-bank">{bank}</span>
+                        </div>
+                        <div className="btn-wrap">
+                          <div
+                            className="btn-copy"
+                            onClick={() => {
+                              onCopy(account, bank);
+                            }}
+                          >
+                            복사하기
+                          </div>
+                          <div className="btn-kakaopay">
+                            <img
+                              className="btn-kakaopay"
+                              src={
+                                import.meta.env.BASE_URL + "/icons/kakaopay.svg"
+                              }
+                              alt=""
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="goorm-mother-wrap">
-                  <div>예분이</div>
-                  <div className="account-wrap">
-                    <div>
-                      <span className="account groom-mother-account">
-                        100-030-625538
-                      </span>
-                      <span className="bank groom-mother-bank">신한은행</span>
-                    </div>
-                    <div className="btn-wrap">
-                      <div
-                        className="btn-copy"
-                        onClick={() => {
-                          onCopy("600-910416-05407", "하나은행");
-                        }}
-                      >
-                        복사하기
-                      </div>
-                      <div className="btn-kakaopay">
-                        <img
-                          className="btn-kakaopay"
-                          src={import.meta.env.BASE_URL + "/icons/kakaopay.svg"}
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -138,92 +141,45 @@ const Account = () => {
               data-bs-parent="#accountInfoWrap"
             >
               <div className="accordion-body">
-                <div>
-                  <div>박주희</div>
-                  <div className="account-wrap">
-                    <div>
-                      <span className="account bride-account">
-                        100-030-625538
-                      </span>
-                      <span className="bank bride-bank">신한은행</span>
-                    </div>
-                    <div className="btn-wrap">
-                      <div
-                        className="btn-copy"
-                        onClick={() => {
-                          onCopy("100-030-625538", "신한은행");
-                        }}
-                      >
-                        복사하기
-                      </div>
-                      <div className="btn-kakaopay">
-                        <img
-                          className="btn-kakaopay"
-                          src={import.meta.env.BASE_URL + "/icons/kakaopay.svg"}
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="bride-fater-wrap">
-                  <div>박효주</div>
-                  <div className="account-wrap">
-                    <div>
-                      <span className="account bride-father-account">
-                        008-08-0381644
-                      </span>
-                      <span className="bank bride-father-bank">
-                        iM뱅크(구 대구은행)
-                      </span>
-                    </div>
-                    <div className="btn-wrap">
-                      <div
-                        className="btn-copy"
-                        onClick={() => {
-                          onCopy("008-08-0381644", "iM뱅크");
-                        }}
-                      >
-                        복사하기
-                      </div>
-                      <div className="btn-kakaopay">
-                        <img
-                          className="btn-kakaopay"
-                          src={import.meta.env.BASE_URL + "/icons/kakaopay.svg"}
-                          alt=""
-                        />
+                {brideList.map((type) => {
+                  const accountInfo = brideAccountList[type];
+                  const name = accountInfo.name;
+                  const account = accountInfo.account;
+                  const bank = accountInfo.bank;
+
+                  return (
+                    <div className="" key={type}>
+                      <div>{name}</div>
+                      <div className="account-wrap">
+                        <div>
+                          <span className="account groom-account">
+                            {account}
+                          </span>
+                          <span className="bank groom-bank">{bank}</span>
+                        </div>
+                        <div className="btn-wrap">
+                          <div
+                            className="btn-copy"
+                            onClick={() => {
+                              onCopy(account, bank);
+                            }}
+                          >
+                            복사하기
+                          </div>
+                          <div className="btn-kakaopay">
+                            <img
+                              className="btn-kakaopay"
+                              src={
+                                import.meta.env.BASE_URL + "/icons/kakaopay.svg"
+                              }
+                              alt=""
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="bride-mother-wrap">
-                  <div>이영선</div>
-                  <div className="account-wrap">
-                    <div>
-                      <span className="account bride-mother-account">
-                        3333-21-8062221
-                      </span>
-                      <span className="bank bride-mother-bank">카카오뱅크</span>
-                    </div>
-                    <div className="btn-wrap">
-                      <div
-                        className="btn-copy"
-                        onClick={() => {
-                          onCopy("3333-21-8062221", "카카오뱅크");
-                        }}
-                      >
-                        복사하기
-                      </div>
-                      <div className="btn-kakaopay">
-                        <img
-                          className="btn-kakaopay"
-                          src={import.meta.env.BASE_URL + "/icons/kakaopay.svg"}
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
             </div>
           </div>

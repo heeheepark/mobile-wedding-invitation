@@ -6,6 +6,12 @@ import "../styles/footer.css";
 import { motion } from "framer-motion";
 
 const Footer = () => {
+  const onCopy = () => {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url);
+    alert("링크가 복사되었습니다.");
+  };
+
   return (
     <motion.div>
       <div className="footer-wrap">
@@ -14,7 +20,12 @@ const Footer = () => {
             <FontAwesomeIcon icon={faKakaoTalk} />
             <span className="share-btn">카카오톡 공유하기</span>
           </div>
-          <div className="copy-link-btn-wrap">
+          <div
+            className="copy-link-btn-wrap"
+            onClick={() => {
+              onCopy();
+            }}
+          >
             <FontAwesomeIcon icon={faCopy} />
             <span className="copy-link-btn">링크 복사하기</span>
           </div>

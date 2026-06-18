@@ -1,6 +1,7 @@
 .section {
   margin: 150px 0;
   text-align: center;
+  overflow: hidden;
 }
 
 .title {

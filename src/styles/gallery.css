@@ -1,23 +1,27 @@
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  padding: 10px 20px;
-}
-
-.gallery-image {
+.gallery-main {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  margin-bottom: 10px;
+}
+
+.gallery-main img {
+  width: 100%;
+  display: block;
+  /* border-radius: 10px; */
+}
+
+.gallery-thumb-swiper {
+  width: 100%;
+  margin: 0 5px !important;
+}
+
+.gallery-thumb-slide {
+  width: 70px !important;
+}
+
+.gallery-thumb-slide img {
+  width: 70px;
+  height: 70px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
-}
-
-.gallery-wrapper {
-  padding: 10px 20px;
-}
-
-.gallery-info {
-  font-size: 12px;
-  margin-top: 10px;
 }

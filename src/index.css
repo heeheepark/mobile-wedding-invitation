@@ -21,11 +21,12 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  color: #535353;
+  color: #464646;
 }
 
 #view {
-  width: 420px;
+  width: 100%;
+  max-width: 420px;
   margin: 0 auto;
   background-color: #ffffff;
 }
