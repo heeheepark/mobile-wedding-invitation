@@ -11,7 +11,16 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+}
+
 body {
+  -ms-overflow-style: none;
   font-family: "NanumSquare", sans-serif !important;
   margin: 0;
 }
@@ -22,11 +31,14 @@ body {
   flex-direction: column;
   text-align: center;
   color: #464646;
+  min-height: 100vh;
 }
 
 #view {
   width: 100%;
   max-width: 420px;
   margin: 0 auto;
-  background-color: #ffffff;
+  background-color: #fff;
+  min-height: 100vh;
+  position: relative;
 }

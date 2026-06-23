@@ -1,7 +1,6 @@
 import "../styles/common.css";
 import "../styles/calendar.css";
 import ReactCalendar from "react-calendar";
-import { calculateDday } from "../utils/date";
 import { motion } from "framer-motion";
 
 const Calendar = () => {

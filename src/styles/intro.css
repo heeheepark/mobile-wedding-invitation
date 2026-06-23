@@ -2,6 +2,20 @@
   padding: 0 0 100px 0 !important;
 }
 
+.main-image-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.title-lottie {
+  width: 420px;
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, -50%) scale(1.31);
+  transform-origin: center;
+  pointer-events: none;
+}
 .name-wrap {
   display: flex;
   justify-content: center;

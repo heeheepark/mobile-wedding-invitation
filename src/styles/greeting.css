@@ -50,8 +50,19 @@
 }
 
 .modal-dialog {
-  width: 400px !important;
-  padding-right: 15px !important;
+  max-width: 100% !important;
+  width: auto !important;
+  margin: 0 15px !important;
+}
+
+@media (max-width: 576px) {
+  .modal-dialog {
+    max-width: 100% !important;
+  }
+}
+
+.modal-content {
+  width: 100% !important;
 }
 
 .modal-header {
