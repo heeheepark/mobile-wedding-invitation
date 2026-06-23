@@ -1,0 +1,45 @@
+.map-section {
+  margin-bottom: 0px;
+}
+
+.place-info-wrap {
+  margin: 50px 0;
+}
+
+.map-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  /* margin: 10px 0 10px 0; */
+  padding: 10px 15px;
+  background-color: rgb(243, 243, 243);
+}
+
+.map-wrap a {
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.map-wrap a img {
+  width: 20px;
+  height: 20px;
+}
+
+.map-wrap a span {
+  text-align: start;
+  font-size: 13px;
+}
+
+.kakao-mpa-wrap {
+  border-left: 1px solid #b3b2b2;
+}
+
+.t-map-wrap {
+  border-left: 1px solid #b3b2b2;
+}

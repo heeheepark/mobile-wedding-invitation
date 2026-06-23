@@ -1,0 +1,31 @@
+.footer-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px 30px 20px;
+  background-color: #ececec;
+  gap: 20px;
+}
+
+.share-btn-wrap,
+.copy-link-btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.share-btn-wrap {
+  margin-bottom: 10px;
+}
+
+.share-btn,
+.copy-link-btn {
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.credits {
+  font-size: 10px;
+}

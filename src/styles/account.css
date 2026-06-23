@@ -1,0 +1,100 @@
+.account {
+  margin-bottom: 50px;
+}
+
+.groom-wrap {
+  background-color: rgb(234, 245, 255) !important;
+  border: none !important;
+}
+
+.bride-wrap {
+  background-color: rgb(255, 239, 239) !important;
+  border: none !important;
+}
+
+.accordion-button[data-bs-target="#collapseOne"] {
+  background-color: rgb(234, 245, 255) !important;
+  border: none !important;
+}
+
+.accordion-button[data-bs-target="#collapseTwo"] {
+  background-color: rgb(255, 239, 239) !important;
+  border: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  color: inherit !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.accordion-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 36px;
+  padding: 27px 20px !important;
+}
+
+.accordion-body > div {
+  width: 100%;
+}
+
+#collapseOne,
+#collapseTwo {
+  text-align: start;
+}
+
+.account-wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10%;
+  margin-top: 6px;
+}
+
+.bank {
+  display: block;
+  width: auto;
+}
+
+.account {
+  display: block;
+  width: auto;
+}
+
+.btn-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-copy {
+  width: 60px;
+  height: 25px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 25px;
+  cursor: pointer;
+}
+
+.btn-kakaopay {
+  background-color: #fae14b;
+  display: flex;
+  align-items: center;
+  width: 60px;
+  height: 25px;
+  border: 1px solid #fae14b;
+  border-radius: 3px;
+  cursor: pointer;
+}

@@ -1,0 +1,38 @@
+.section {
+  margin: 150px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.content {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+h1 {
+  font-size: 40px !important;
+  margin: 50px 0 !important;
+}
+
+h2 {
+  font-size: 25px !important;
+  margin-bottom: 50px !important;
+}
+
+h3 {
+  font-size: 20px !important;
+  margin-bottom: 50px !important;
+}
+
+.btn-volume {
+  position: absolute;
+  cursor: pointer;
+  z-index: 9;
+  right: 3%;
+  top: 0.3%;
+}
