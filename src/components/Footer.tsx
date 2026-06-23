@@ -6,6 +6,12 @@ import "../styles/footer.css";
 import { motion } from "framer-motion";
 
 const Footer = () => {
+  const handleKakaoShare = () => {
+    window.Kakao.Share.sendCustom({
+      templateId: 134549, // 카카오 디벨로퍼스에서 발급된 템플릿 ID
+    });
+  };
+
   const onCopy = () => {
     const url = window.location.href;
     navigator.clipboard.writeText(url);
@@ -16,7 +22,12 @@ const Footer = () => {
     <motion.div>
       <div className="footer-wrap">
         <div className="bnt-wrap">
-          <div className="share-btn-wrap">
+          <div
+            className="share-btn-wrap"
+            onClick={() => {
+              handleKakaoShare();
+            }}
+          >
             <FontAwesomeIcon icon={faKakaoTalk} />
             <span className="share-btn">카카오톡 공유하기</span>
           </div>
