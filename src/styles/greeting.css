@@ -77,17 +77,17 @@
 }
 
 .modal-body {
-  padding: 0 20px !important;
+  padding: 0 !important;
   border-bottom: none !important;
 }
 
 .modal-body > div:first-child {
   border-bottom: 1px solid rgb(226, 226, 226);
-  padding: 20px;
+  padding: 20px 15px;
 }
 
 .modal-body > div:last-child {
-  padding: 20px;
+  padding: 20px 15px;
 }
 
 .name-info-wrap {
