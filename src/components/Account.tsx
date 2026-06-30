@@ -20,19 +20,19 @@ const Account = () => {
       name: "김시환",
       account: "600-910416-05407",
       bank: "하나은행",
-      payLink: "https://qr.kakaopay.com/Ej9GRqk0T",
+      payLink: "Ej9GRqk0T",
     },
     groom_father: {
       name: "김정도",
       account: "831402-01-139365",
       bank: "국민은행",
-      payLink: "https://qr.kakaopay.com/FJARjAxyW",
+      payLink: "FJARjAxyW",
     },
     groom_mother: {
       name: "예분이",
       account: "317-13-002992",
       bank: "iM뱅크",
-      payLink: "https://qr.kakaopay.com/Ej8rMhS0F",
+      payLink: "Ej8rMhS0F",
     },
   };
 
@@ -41,7 +41,7 @@ const Account = () => {
       name: "박주희",
       account: "100-030-625538",
       bank: "신한은행",
-      payLink: "https://qr.kakaopay.com/Ej8qGS79U",
+      payLink: "Ej8qGS79U",
     },
     bride_father: {
       name: "박효주",
@@ -53,7 +53,7 @@ const Account = () => {
       name: "이영선",
       account: "3333-21-8062221",
       bank: "카카오뱅크",
-      payLink: "https://qr.kakaopay.com/FSdDg27N5",
+      payLink: "FSdDg27N5",
     },
   };
 
@@ -111,10 +111,15 @@ const Account = () => {
                             복사하기
                           </div>
                           {payLink ? (
-                            <a
+                            <div
                               className="btn-kakaopay"
-                              href={payLink}
-                              target="_blank"
+                              onClick={() => {
+                                window.open(
+                                  `https://qr.kakaopay.com/${payLink}`,
+                                  "_blank",
+                                  "noopener,noreferrer",
+                                );
+                              }}
                             >
                               <img
                                 className="btn-kakaopay"
@@ -124,7 +129,7 @@ const Account = () => {
                                 }
                                 alt=""
                               />
-                            </a>
+                            </div>
                           ) : (
                             ""
                           )}
@@ -180,10 +185,15 @@ const Account = () => {
                             복사하기
                           </div>
                           {payLink ? (
-                            <a
+                            <div
                               className="btn-kakaopay"
-                              href={payLink}
-                              target="_blank"
+                              onClick={() => {
+                                window.open(
+                                  `https://qr.kakaopay.com/${payLink}`,
+                                  "_blank",
+                                  "noopener,noreferrer",
+                                );
+                              }}
                             >
                               <img
                                 className="btn-kakaopay"
@@ -193,7 +203,7 @@ const Account = () => {
                                 }
                                 alt=""
                               />
-                            </a>
+                            </div>
                           ) : (
                             ""
                           )}
